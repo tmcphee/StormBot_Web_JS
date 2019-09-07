@@ -1,0 +1,39 @@
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">
+        <img src="{{StormBot_Icon_URL}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        StormBot
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          {{#if SESSION.USER}}
+          <li class="nav-item">
+            <a class="nav-link" href="/hub">Hub</a>
+          </li>
+          {{/if}}
+          <li class="nav-item">
+            <a class="nav-link" href="https://discordapp.com/oauth2/authorize?client_id=613858617073860627&scope=bot&permissions=8">Invite</a>
+          </li>
+        </ul>
+      </div>
+      <span class="navbar-text">
+        {{#if SESSION.USER}}
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="https://cdn.discordapp.com/avatars/{{ SESSION.DISCORD_ID }}/{{ SESSION.AVATAR }}.png" width="30" height="30" class="d-inline-block align-center rounded-circle" alt="">
+              {{ SESSION.USER }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" style="color:black;" href="/Logout">Logout</a>
+            </div>
+          </div>
+        {{else}}
+          <div class="nav-item">
+            <a class="nav-link" href="/Login">Login</a>
+          </div>
+        {{/if}}
+      </span>  
+    </nav>

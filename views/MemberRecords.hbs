@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-1">
+        </div>
+        <div class="col-md-10">
+            {{#MEMBERS}} 
+                <br>
+                <div class="card flex-row flex-wrap bg-dark text-white w-100" style="width: 100%;">
+                    <div class="card-header border-0">
+                        <img width="50" height="50" src="{{IconUrl}}" alt="" class="rounded-circle">
+                    </div>
+                    <div class="card-block px-2">
+                        <h4 class="card-title">{{DiscordName}}#{{Discriminator}} </h4>
+                        {{Nickname}}
+                        <p class="card-text">
+                            {{DiscordID}}
+                            <span class="px-3 mx-auto"><a href="/{{../id}}/MemberRecords/{{DiscordID}}/" class="card-link" style="">View/Edit</a></span>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="w-100 d-flex flex-row">
+                            {{#each ./Roles}} 
+                                <div class="rounded-pill bg-secondary text-white px-3" style="border: 2px solid {{RoleColour}};">
+                                    <font color="{{RoleColour}}">
+                                        <div style="" class="align-middle">
+                                            • {{RoleName}}
+                                        </div>
+                                    </font>
+                                </div>
+                                {{{member_records @index}}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            {{/MEMBERS}}
+        </div>
+    </div>
+</div>

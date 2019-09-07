@@ -1,0 +1,12 @@
+<br><br><br><br><br>
+
+<p>DISCORD USER: {{ SESSION.USER }}#{{ SESSION.DISCRIMINATOR }}</p>
+<p>ID: {{ SESSION.DISCORD_ID }}</p>
+<p>AVATAR: {{ SESSION.AVATAR }}</p>
+
+{{#each SESSION.GUILDS}} 
+    <tr>
+        <td>{{name}}</td>
+        <td>{{id}}</td>
+    </tr>
+{{/each}} 

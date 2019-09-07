@@ -1,0 +1,98 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="card flex-row flex-wrap bg-dark text-white w-100" style="width: 100%;">
+            <div class="card-header border-0">
+                <img width="50" height="50" src="{{MEMBERS.IconUrl}}" alt="???" class="rounded-circle">
+            </div>
+            <div class="card-block px-2">
+                <h4 class="card-title">
+                    {{MEMBERS.DiscordName}}#{{MEMBERS.Discriminator}}
+                </h4>
+                {{MEMBERS.Nickname}}
+                <p class="card-text">
+                    {{MEMBERS.DiscordID}}
+                </p>
+            </div>
+        </div>
+        <br>
+		<div class="col-md-2">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">
+                    Roles
+                </div>
+                <div class="card-body">
+                    {{#each MEMBERS.Roles}} 
+                        <div class="rounded-pill bg-secondary text-white px-3" style="border: 2px solid {{RoleColour}};">
+                            <font color="{{RoleColour}}">
+                                <div style="" class="align-middle">
+                                    • {{RoleName}}
+                                </div>
+                            </font>
+                        </div>
+                        <br>
+                    {{/each}}
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">
+                    Activity
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table class="table table-striped table-dark">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">MSG</th>
+                                    <th scope="col">VOIP</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="clickable" data-toggle="collapse" data-target="#group-of-rows-2" aria-expanded="false" aria-controls="group-of-rows-2">
+                                        <td>12</td>
+                                        <td>1hr 5min</td>
+                                        <td>09-02-19</td>
+                                        <td>+</td>
+                                    </tr>
+                                    <tbody id="group-of-rows-2" class="collapse table-secondary text-dark">
+                                        <tr> 
+                                            <td>67</td>
+                                            <td></td>
+                                            <td>09-01-19</td>
+                                            <td>General</td>
+                                        </tr>
+                                        <tr> 
+                                            <td></td>
+                                            <td>6hr 21min</td>
+                                            <td>09-01-19</td>
+                                            <td>Voice 1</td>
+                                        </tr>
+                                    </tbody>
+                                    <tr>
+                                        <td>156</td>
+                                        <td>8min</td>
+                                        <td>08-31-19</td>
+                                        <td>+</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            test
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
