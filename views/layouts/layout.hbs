@@ -5,11 +5,13 @@
     <title>StormBot</title>
 
     <link rel="icon" href="{{StormBot_Icon_URL}}">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-4.3.1.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-colorpicker.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap4-toggle-3-5-0-min.css">
+
   </head>
-  <body >
-    <!-- style="background-color:#7E8387;" -->
+  <body style="background-color:#615e58;">
+    <!-- style="background-color:#3d3c3a;" -->
       {{> nav }}
       {{#if DASH}}
         {{> guildnav }}
@@ -20,9 +22,17 @@
       <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/javascripts/handlebars-4-0-6.js"></script>
+    <script src="/javascripts/jquery-3-3-1-slim-min.js"></script>
+    <script src="/javascripts/popper-1-14-7-min.js"></script>
+    <script src="/javascripts/bootstrap-4-3-1-min.js"></script>
+    <script src="/javascripts/bootstrap4-toggle-3-5-0.min.js"></script>
+    <script src="/javascripts/bootstrap-colorpicker.js"></script>
+
+    <script>
+      $(function () {
+          $('#simple-color-picker').colorpicker();
+      });
+    </script>
   </body>
 </html>

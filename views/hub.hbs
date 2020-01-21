@@ -5,11 +5,11 @@
         </form>   
     </div>
     <div class="row">
-		<div class="col-md-2">
+		<div class="col-md-1">
         </div>
         <div class="col-md-10">
             {{#each GUILDS}} 
-                <button class="btn btn-fix" onclick="window.location.href='/{{id}}/dashboard';">
+                <button class="btn btn-block" onclick="window.location.href='/{{id}}/dashboard';">
                     <div class="card flex-row flex-wrap bg-dark text-white">
                         <div class="card-header border-0">
                             <img width="50" height="50" src="https://cdn.discordapp.com/icons/{{id}}/{{icon}}.png" alt="" class="rounded-circle border-2">
@@ -22,6 +22,8 @@
                     </div>
                 </button>
             {{/each}}
+        </div>
+        <div class="col-md-1">
         </div>
     </div>
 </div>

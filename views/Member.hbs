@@ -14,8 +14,8 @@
                 </p>
             </div>
         </div>
-        <br>
 		<div class="col-md-2">
+            <br>
             <div class="card text-center bg-dark text-white">
                 <div class="card-header">
                     Roles
@@ -33,11 +33,12 @@
                     {{/each}}
                 </div>
                 <div class="card-footer text-muted">
-                    2 days ago
+                    
                 </div>
             </div>
         </div>
         <div class="col-md-10">
+            <br>
             <div class="card text-center bg-dark text-white">
                 <div class="card-header">
                     Activity
@@ -45,52 +46,25 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <table class="table table-striped table-dark">
+                            <table class="table table-condensed table-striped table-dark" style="border-collapse:collapse;">
                                 <thead>
                                     <tr>
-                                    <th scope="col">MSG</th>
-                                    <th scope="col">VOIP</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col"></th>
+                                        <th scope="col">MSG</th>
+                                        <th scope="col">VOIP</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr class="clickable" data-toggle="collapse" data-target="#group-of-rows-2" aria-expanded="false" aria-controls="group-of-rows-2">
-                                        <td>12</td>
-                                        <td>1hr 5min</td>
-                                        <td>09-02-19</td>
-                                        <td>+</td>
-                                    </tr>
-                                    <tbody id="group-of-rows-2" class="collapse table-secondary text-dark">
-                                        <tr> 
-                                            <td>67</td>
-                                            <td></td>
-                                            <td>09-01-19</td>
-                                            <td>General</td>
-                                        </tr>
-                                        <tr> 
-                                            <td></td>
-                                            <td>6hr 21min</td>
-                                            <td>09-01-19</td>
-                                            <td>Voice 1</td>
-                                        </tr>
-                                    </tbody>
-                                    <tr>
-                                        <td>156</td>
-                                        <td>8min</td>
-                                        <td>08-31-19</td>
-                                        <td>+</td>
-                                    </tr>
-                                </tbody>
+                                {{{Table}}}
                             </table>
                         </div>
-                        <div class="col-md-6">
-                            test
-                        </div>
+                    </div>
+                    <div class="col-md-6">
+                            
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                    2 days ago
+                    
                 </div>
             </div>
         </div>

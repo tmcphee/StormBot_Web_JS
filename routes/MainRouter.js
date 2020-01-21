@@ -7,7 +7,7 @@ var router = express.Router();
 // Nodejs encryption with CTR
 const crypto = require('crypto');
 const algorithm = 'aes-256-cbc';
-
+/*
 function encrypt(text, key, iv) {
  let cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(key), iv);
  let encrypted = cipher.update(text);
@@ -22,7 +22,7 @@ function decrypt(text, key, iv) {
  let decrypted = decipher.update(encryptedText);
  decrypted = Buffer.concat([decrypted, decipher.final()]);
  return decrypted.toString();
-}
+}*/
 /************************************************************************************/
 
 
@@ -31,6 +31,10 @@ router.get('/',function(req,res){
   res.render('index', {title: 'StormBot', conditins: true, SESSION: req.session})
   console.log(__dirname+'/index.html');
   //__dirname : It will resolve to your project folder.
+});
+
+router.get('/hi',function(req,res){
+  res.render("hello")
 });
 
 
